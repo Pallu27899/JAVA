@@ -1,0 +1,21 @@
+Explain Why Java is Platform independent?
+
+Ans 
+java is platform independent and object oriented programming language similar to c++
+with some advancement in feature and simplification is use. 
+
+java is platform independent because it is different from other languages like c,c++,etc. 
+which are compiled into platform specific machines while java is a write once, run
+anywhere language. A platform is the hardware or software environment in which a program runs 
+
+There are two types of platforms software-based and hardware-based. Java provides a software-based platform.
+
+The Java platform differs from most other platforms in the sense that it is a software-based platform that runs on top of other hardware-based platforms. 
+It has two components:
+
+Runtime Environment
+API(Application Programming Interface)
+
+Java code can be executed on multiple platforms, for example, Windows, Linux, Sun Solaris, Mac/OS, etc. Java code is compiled by the compiler 
+and converted into bytecode. This bytecode is a platform-independent code because it can be run on multiple platforms, 
+i.e., Write Once and Run Anywhere (WORA).

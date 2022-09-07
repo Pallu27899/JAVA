@@ -1,0 +1,38 @@
+
+Q1) Differentiate between static and non-static variables?
+
+
+Ans:- A variable provides us with named storage that our programs can manipulate.
+      Each variable in Java has a specific type, which determines the size and
+      layout of the variable's memory; the range of values that can be stored within
+      that memory; and the set of operations that can be applied to the variable.
+
+      *Static Variable
+      ==>>
+      A static variable is also called a class variable and is common across the objects
+      of the class and this variable can be accessed using class name as well.
+
+     1. Access:-
+                 A static variable can be accessed by static members as well as non-static
+                 member functions.
+     2. Sharing:-
+                  A static variable acts as a global variable and is shared among all the objects
+                   of the class.
+     3. Memory allocation:-
+                  Static variables occupies less space and memory allocation happens once.
+     4. Keyword :-
+                  A static variable is declared using static keyword.
+
+
+      Non-Static Variable
+      ==>>
+      Any variable of a class which is not static is called non-static variable or an instance variable.
+
+      1. Access:-
+                 A non-static variable can not be accessed by static member functions.
+      2. Sharing:-
+                 A non-static variables are specific to instance object in which they are created.
+      3. Memory allocation:-
+                 A non-static variable may occupy more space. Memory allocation may happen at run time.
+      4. Keyword:-
+                 A normal variable is not required to have any special keyword.
