@@ -1,0 +1,45 @@
+ What is the difference between equals method and == operator in java? And what will be the output of the
+following code snippets and giving proper explanation.
+Code snippet 1 >
+String s1 = new String("abc");
+String s2 = new String("abc");
+System.out.println(s1.equals(s2));
+Code snippet 2 >
+StringBuilder sb1 = new StringBuilder("abc");
+StringBuilder sb2 = new StringBuilder("abc");
+System.out.println(sb1.equals(sb2));
+Code snippet 3 >
+String s1 = new String("abc");
+String s2 = new String("abc");
+System.out.println(s1==s2);
+
+
+
+Ans:
+diffrence between equals and "==" operator is that equals() method is used for comparing 
+content type of things like (String) where as "==" operator is used for comparing reference point
+i.e.comparing their location. 
+
+1.By Using equals() Method
+The equals() method compares the original content of the string. It compares values of string for
+equality. String class provides the following two methods:
+
+2. By Using == operator
+Day5: String, Array, CLA, Scanner 8
+The == operator compares references not values.
+
+2. By Using == operator
+Day5: String, Array, CLA, Scanner 8
+The == operator compares references not values.
+
+
+Snippets:-
+
+1.in snippet 1 the code will return "true" becouse we are comparing 2 "String values"  same value("abc") 
+using equals method thus is is just comparing by value and in this case both are same so the answer is "true".
+
+2.in snippet 2 the code will return "false" becouse StringBuilder does not have equals method even though we are
+comparing same values the answer will be "false" . but if we change StrungBuilder to String and then compare it will return "true"
+
+3.in snippet 3 the code  will return "false" becouse we are using "==" operator their which is not comparing their value but  is comparing thier 
+reference point/location.

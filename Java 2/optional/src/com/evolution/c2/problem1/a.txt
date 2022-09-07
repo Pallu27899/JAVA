@@ -1,0 +1,70 @@
+) a) Why String is immutable in java and what is the difference between String and String Builder? And Write
+some of the methods of String class at least 5 with example.
+
+
+
+Ans:
+
+The String is immutable in Java because of the security, synchronization and concurrency, caching, and class loading. 
+The reason of making string final is to destroy the immutability and to not allow others to extend it.
+ The String objects are cached in the String pool, and it makes the String immutable.
+ As Java uses the concept of String literal. Suppose there are 5 reference variables, all refer to one
+object "Masai". If one reference variable changes the value of the object, it will be affected by all the
+reference variables. That is why String objects are immutable in Java.
+ 
+
+1 Mutability
+A String is immutable in Java, while a StringBuilder is mutable in Java. An immutable object is an object whose content cannot be changed after it is created.
+
+When we try to concatenate two Java strings, a new String object is created in the string pool. This can be demonstrated by comparing HashCode for String object after every concat operation.
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        String s = "AB";
+        System.out.println(s.hashCode());
+        s += "C";
+        System.out.println(s.hashCode());
+    }
+}
+
+2  Equality
+We can use the equals() method for comparing two strings in Java since the String class overrides the equals()
+ method of the Object class, while StringBuilder doesn’t override the equals() method of the Object class and hence equals() method cannot be used to compare two StringBuilder objects.
+ 
+ class Main
+{
+    private static final String STR = "ABC";
+ 
+    public static void main(String[] args)
+    {
+        String s1 = new String(STR);
+        String s2 = new String(STR);
+        System.out.println(s1.equals(s2));
+ 
+        StringBuilder sb1 = new StringBuilder(STR);
+        StringBuilder sb2 = new StringBuilder(STR);
+        System.out.println(sb1.equals(sb2));
+    }
+}
+
+3 . Comparable
+The String class implements the Comparable interface, while StringBuilder doesn’t. To illustrate, consider the following code, which throws ClassCastException since 
+StringBuilder doesn’t provide any mechanism for string comparison.
+ 
+ 
+ 4. Constructor
+We can create a String object without using a new operator, which is not possible with a StringBuilder.
+
+String str = "abc";
+is equivalent to:
+
+char[] data = {'a', 'b', 'c'};
+String str = new String(data);
+
+5. Length
+Since String is immutable, its length is fixed. But StringBuilder has the setLength() method, which can change the StringBuilder object to the specified length.
+
+
+ 

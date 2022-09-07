@@ -1,0 +1,52 @@
+Q1) Is there any difference between creating a string with and without a new operator?  
+Explain with an example.
+Ans :
+There are two ways to create a String object in Java: 
+1. By string literal:
+         String s = “Pallu”; 
+2. By new keyword:
+        String s = new String (” Pallu”); 
+        
+        
+1.	By string literal: 
+  Java String literal is created by using double-quotes. 
+  
+For Example: 
+String s="Pallu"; 
+In Java, the JVM maintains a string pool to store all of its strings inside the memory. The string pool helps in reusing the strings. 
+Here, we are directly providing the value “Pallu”. Hence, the compiler first checks the string pool to see if this string already exists. 
+   a) If this string already exists, the new string is not created. Instead, the new reference points to the already existing string “Pallu”. 
+   b) If the string doesn't exist, the new string “Welcome” is created inside this string pool area. 
+
+
+example 
+
+String s1 = "Pallu"; 
+String s2 = "Pallu"; 
+if(s1 == s2)
+       System.out.println("same"); 
+else 
+       System.out.println("not same"); 
+
+       
+output : same
+
+
+2.	By new keyword: 
+
+String s1 = new String("Pallu"); 
+Here the value of the string is not directly provided, hence a new “Pallu” string is created inside 
+the heap memory even though the “Pallu” string object is already present inside the string pool area.
+
+ Example:
+ 
+ String s1 = new String("Pallu"); 
+String s2 = new String("Pallu"); 
+if(s1 == s2) 
+       System.out.println("same"); 
+else 
+       System.out.println("not same");
+       
+       
+ 
+ output: not same
